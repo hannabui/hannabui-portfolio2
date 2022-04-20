@@ -7,12 +7,12 @@ export default function LoginApp() {
     let [password, setPassword] = useState("");
     let [loggedIn, setLoggedIn] = useState(false);
     let [errorMsg, setErrorMsg] = useState(false);
-    let welcome = "Welcome, please log in below!"
+    let welcome = "Welcome, please enter a username below!  \n  The secret password is 'MilkTea.'"
     let error = "Incorrect password. Please try again."
 
     let doLogin = useCallback(() => {
         console.log("Welcome + " + username)
-        if (password === "Ch@rge!") {
+        if (password === "MilkTea") {
             setLoggedIn(true)
         } else {
             setErrorMsg(true);
@@ -22,6 +22,17 @@ export default function LoginApp() {
         loggedIn ? (
             <View style={styles.container}>
                 <Text>Welcome {username}!</Text>
+
+                <Text>Do you like chocolate or candy more?</Text>
+                <Button title="chocolate"></Button>
+                <Button title="candy"></Button>
+                <Text>Would you have fruits or icecream for dessert?</Text>
+                <Button title="fruits"></Button>
+                <Button title="icecream"></Button>
+                <Text>Do you like something sweet that's rich or refreshing?</Text>
+                <Button title="rich"></Button>
+                <Button title="refreshing"></Button>
+
             </View>
             ):(
             <View style={styles.container}>
