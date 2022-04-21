@@ -1,3 +1,7 @@
+//I've added additional componenets such as:
+//creating a survey asking whether you're a milk tea or fruit tea
+//creating the survey to choose based on what side was chosen most. 
+//once submitted, images would should what kind of tea they are.
 import { StatusBar } from "expo-status-bar";
 import { useState, useCallback } from "react";
 import { StyleSheet, Text, Button, View, TextInput, Image } from "react-native";
@@ -8,7 +12,7 @@ export default function LoginApp() {
     let [loggedIn, setLoggedIn] = useState(false);
     let [errorMsg, setErrorMsg] = useState(false);
     let [chocolate, setChocolate] = useState(false);
-    let [ice, setIce] = useState(false);
+    let [icecream, setIcecream] = useState(false);
     let [rich, setRich] = useState(false);
     let [result, setResult] = useState('');
     let [milkTea, setMilkTea] = useState(false);
@@ -25,7 +29,7 @@ export default function LoginApp() {
     }, [username, password])
 
     let submitForm=()=>{
-        if((chocolate && ( ice || rich)) || (ice && (chocolate || rich)) || (rich && ( ice || chocolate)) ){
+        if((chocolate && ( icecream || rich)) || (icecream && (chocolate || rich)) || (rich && ( icecream || chocolate)) ){
             setResult("You are a Milk Tea!")
             setMilkTea(true)
         }
@@ -45,8 +49,8 @@ export default function LoginApp() {
                 <Button title="candy" onPress={()=> setChocolate(false)}></Button>
 
                 <Text>Would you have fruits or icecream for dessert?</Text>
-                <Button title="icecream" onPress={()=> setIce(true)}></Button>
-                <Button title="fruits" onPress={()=> setIce(false)}></Button>
+                <Button title="icecream" onPress={()=> setIcecream(true)}></Button>
+                <Button title="fruits" onPress={()=> setIcecream(false)}></Button>
 
                 <Text>Do you like something sweet that's rich or refreshing?</Text>
                 <Button title="rich" onPress={()=> setRich(true)}></Button>
