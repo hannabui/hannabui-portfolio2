@@ -46,16 +46,16 @@ export default function LoginApp() {
                 <Text>Welcome {username}!</Text>
 
                 <Text>Do you like chocolate or candy more?</Text>
-                <Button title="chocolate" onPress={()=> setChocolate(true)} ></Button>
+                <Button title="chocolate" onPress={()=> setChocolate(true)}></Button><br/>
                 <Button title="candy" onPress={()=> setChocolate(false)}></Button>
 
                 <Text>Would you have fruits or icecream for dessert?</Text>
-                <Button title="icecream" onPress={()=> setIcecream(true)}></Button>
+                <Button title="icecream" onPress={()=> setIcecream(true)}></Button><br/>
                 <Button title="fruits" onPress={()=> setIcecream(false)}></Button>
 
                 <Text>Do you like something sweet that's rich or refreshing?</Text>
-                <Button title="rich" onPress={()=> setRich(true)}></Button>
-                <Button title="refreshing" onPress={()=> setRich(false)}></Button>
+                <Button title="rich" onPress={()=> setRich(true)}></Button><br/>
+                <Button title="refreshing" onPress={()=> setRich(false)}></Button><br/>
 
                 <Button title="submit" onPress={()=> submitForm()}></Button>
 
