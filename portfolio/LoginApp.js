@@ -29,7 +29,7 @@ export default function LoginApp() {
         }
     }, [username, password])
 
-    let submitForm=()=>{
+    let submitForm = (() => {
         if((chocolate && ( icecream || rich)) || (icecream && (chocolate || rich)) || (rich && ( icecream || chocolate)) ){
             setResult("You are a Milk Tea!")
             setMilkTea(true)
@@ -38,7 +38,7 @@ export default function LoginApp() {
             setResult("You are a Fruit Tea!")
             setMilkTea(false)
         }
-    }
+    })
 
     return (
         loggedIn ? (
