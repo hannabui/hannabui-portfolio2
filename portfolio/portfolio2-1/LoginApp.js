@@ -1,3 +1,4 @@
+//I chose option 1.1 where I work on two previous projects
 //I've added additional componenets such as:
 //creating a survey asking whether you're a milk tea or fruit tea
 //creating the survey to choose based on what side was chosen most. 
